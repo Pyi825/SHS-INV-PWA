@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Myanmar3', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+body {
+  background: #f6f6f6;
+  margin: 0;
+  padding: 10px;
+}
+.container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+h2 {
+  text-align: center;
+  color: #d4af37;
+  margin-bottom: 6px;
+  font-size: 22px;
+}
+.company-info {
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 18px;
+}
+form label {
+  display: block;
+  margin-top: 14px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #444;
+}
+form input, form select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 6px;
+}
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.action-buttons button {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  background: #f0ad4e;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.action-buttons button:hover {
+  background: #ec971f;
+}
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 16px;
+  font-size: 17px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.submit-btn:disabled {
+  background: #aaa;
+}
+#result {
+  text-align: center;
+  margin-top: 15px;
+  color: #333;
+  font-weight: bold;
+  font-size: 14px;
+}
+#receipt {
+  display: none;
+  padding: 10px;
+  background: #fff;
+  border: 1px dashed #999;
+  margin-top: 20px;
+}
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #receipt, #receipt * {
+    visibility: visible;
+  }
+  #receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80mm;
+  }
+  @page {
+    size: 80mm auto;
+    margin: 0;
+  }
+}
